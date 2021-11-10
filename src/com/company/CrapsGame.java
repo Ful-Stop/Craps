@@ -1,4 +1,5 @@
 // Implements the game of Craps logic
+package com.company;
 
 public class CrapsGame
 {
@@ -15,10 +16,10 @@ public class CrapsGame
     public int processRoll(int total){
         if(point == 0){
             if(total == 2 || total == 3 || total == 12){
-                return 1;
+                return -1;
             }
             else if(total == 7 || total == 11){
-                return -1;
+                return 1;
             }
             else{
                 point = total;
